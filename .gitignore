@@ -1,0 +1,35 @@
+# Ambiente virtual
+
+env/
+.env/
+
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Cache de execução do ipython
+.ipython/
+
+# VS Code / IDEs
+
+.vscode/
+.idea/
+
+# Arquivos temporários
+
+*.tmp
+*.temp
+
+# Cache de bibliotecas
+
+.cache/
+
+# Arquivos de configuração local
+
+.env.local
