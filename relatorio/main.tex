@@ -1,0 +1,510 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Texto em vermelho para marcar o que ainda falta escrever (remover ao final)
+\newcommand{\pendente}[1]{{\color{red}[#1]}}
+
+\begin{document}
+
+
+\title{Trabalho Computacional AV2: Redes Neurais Artificiais \\
+{\footnotesize T296 - Inteligência Artificial Computacional}}
+
+\author{
+\IEEEauthorblockN{Gabriel de Sousa Nobre}
+\IEEEauthorblockA{
+\textit{Graduação em Ciência da Computação} \\
+\textit{Universidade de Fortaleza (UNIFOR)} \\
+Fortaleza, Ceará, Brasil \\
+gabrielnobre.dev@gmail.com
+}
+\and
+\IEEEauthorblockN{Victor Lins Gurgel do Amaral}
+\IEEEauthorblockA{
+\textit{Graduação em Ciência da Computação} \\
+\textit{Universidade de Fortaleza (UNIFOR)} \\
+Fortaleza, Ceará, Brasil \\
+vlinsgurgel@gmail.com
+}
+\and
+\IEEEauthorblockN{Lorenzo Barros Calheiros Pinheiro}
+\IEEEauthorblockA{
+\textit{Graduação em Ciência da Computação} \\
+\textit{Universidade de Fortaleza (UNIFOR)} \\
+Fortaleza, Ceará, Brasil \\
+barroslorenzopro@gmail.com
+}}
+
+\maketitle
+
+\begin{abstract}
+Este trabalho apresenta a implementação e a avaliação de redes neurais
+artificiais em duas etapas.
+\pendente{Primeira etapa: resumo da classificação do conjunto spiral\_d com
+Perceptron Simples, ADALINE e MLP.}
+Na segunda etapa, os modelos Perceptron Simples, ADALINE e Perceptron de
+Múltiplas Camadas (MLP) foram aplicados ao reconhecimento facial de 20
+pessoas, a partir de 640 imagens redimensionadas para 30 por 30 pixels. Os
+modelos foram implementados apenas com a biblioteca NumPy e validados por
+simulações de Monte Carlo com 10 rodadas e partição 80/20. A MLP obteve a
+maior acurácia média (97,42\%), seguida de perto pelo Perceptron Simples
+(96,80\%), enquanto o ADALINE obteve 92,50\% e a maior variação entre as
+rodadas. Os erros se concentraram em poucas pessoas e imagens, e os três
+modelos erraram repetidamente algumas das mesmas imagens.
+\end{abstract}
+
+\begin{IEEEkeywords}
+redes neurais artificiais, perceptron simples, ADALINE, perceptron de
+múltiplas camadas, reconhecimento facial, simulação de Monte Carlo
+\end{IEEEkeywords}
+
+\section{Introdução}
+
+As redes neurais artificiais (RNA) são modelos computacionais inspirados no
+sistema nervoso. Elas são formadas por neurônios artificiais ligados por
+pesos sinápticos, que são ajustados a partir de exemplos durante o
+treinamento~\cite{b1}. Neste trabalho foram implementados os modelos
+Perceptron Simples~\cite{b2}, ADALINE~\cite{b3} e Perceptron de Múltiplas
+Camadas (MLP), treinado pelo algoritmo de retropropagação do
+erro~\cite{b4}. Foram usadas apenas
+as bibliotecas NumPy, Matplotlib, Seaborn e OpenCV.
+
+O trabalho foi dividido em duas etapas. Na primeira, os modelos foram
+aplicados a um problema de classificação bidimensional com duas classes,
+que serve para validar as implementações. Na segunda, os mesmos modelos foram
+aplicados ao reconhecimento facial de 20
+pessoas, um problema com 20 classes e centenas de atributos. As
+Seções~\ref{sec:met1} e~\ref{sec:res1} tratam da primeira etapa, as
+Seções~\ref{sec:met2} e~\ref{sec:res2} tratam da segunda, e a
+Seção~\ref{sec:conclusao} apresenta as conclusões.
+
+% =====================================================================
+% PRIMEIRA ETAPA (a ser escrita pela equipe)
+% =====================================================================
+
+\section{Classificação Bidimensional: Metodologia}\label{sec:met1}
+
+\subsection{Organização dos dados}
+\pendente{Organização do conjunto spiral\_d.csv (1400 amostras, duas
+classes rotuladas na terceira coluna) e normalização.}
+
+\subsection{Visualização inicial}
+\pendente{Gráfico de espalhamento dos dados.}
+
+\subsection{Modelos implementados}
+\pendente{Perceptron Simples, ADALINE e MLP.}
+
+\subsection{Definição dos hiperparâmetros}
+\pendente{Como os hiperparâmetros de cada modelo foram escolhidos.}
+
+\subsection{\textit{Underfitting} e \textit{overfitting}}
+\pendente{Topologias subdimensionadas e superdimensionadas da rede MLP.}
+
+\subsection{Validação e métricas}
+\pendente{Amostragem aleatória com $R = 500$ rodadas (80\% treino e 20\%
+teste); acurácia, sensibilidade, especificidade, precisão e F1-score.}
+
+\section{Classificação Bidimensional: Resultados e Discussão}\label{sec:res1}
+
+\subsection{Desempenho dos modelos}
+\pendente{Uma tabela por métrica (média, desvio-padrão, maior e menor
+valor), boxplot ou violin plot e discussão.}
+
+% Modelo de tabela (uma para cada métrica):
+% \begin{table}[htbp]
+% \caption{Estatísticas da acurácia ao longo das 500 rodadas}
+% \begin{center}
+% \begin{tabular}{|l|c|c|c|c|}
+% \hline
+% \textbf{Modelos} & \textbf{Média} & \textbf{Desvio-Padrão} & \textbf{Maior} & \textbf{Menor} \\
+% \hline
+% Perceptron Simples & & & & \\
+% \hline
+% ADALINE & & & & \\
+% \hline
+% MLP & & & & \\
+% \hline
+% \end{tabular}
+% \label{tab:acc1}
+% \end{center}
+% \end{table}
+
+\subsection{Matrizes de confusão e curvas de aprendizado}
+\pendente{Rodadas de maior e menor valor de cada métrica.}
+
+\subsection{\textit{Underfitting} e \textit{overfitting}}
+\pendente{Desempenho das topologias com underfitting e overfitting da rede
+MLP.}
+
+% =====================================================================
+% SEGUNDA ETAPA: RECONHECIMENTO FACIAL
+% =====================================================================
+
+\section{Reconhecimento Facial: Metodologia}\label{sec:met2}
+
+\subsection{Organização dos dados}
+
+O conjunto RecFac possui 640 imagens em tons de cinza de 20 pessoas, com 32
+imagens por pessoa e dimensão de $120 \times 128$ pixels. As imagens de cada
+pessoa variam a direção do rosto (frente, esquerda, direita e para cima), a
+expressão facial (neutra, feliz, triste e com raiva) e o uso de óculos
+escuros. Esse conjunto corresponde ao CMU Face Images~\cite{b5}.
+
+Cada imagem foi lida com a biblioteca OpenCV e redimensionada para
+$30 \times 30$ pixels (Fig.~\ref{fig:redim}), a menor das opções do
+enunciado. Assim, cada imagem passa a ter $p = 900$ atributos, em vez de
+15.360, o que reduz bastante o custo do treinamento, e os rostos continuam
+distinguíveis. Cada imagem foi transformada em um vetor coluna, e os
+vetores foram reunidos na matriz $\mathbf{X} \in \mathbb{R}^{p \times N}$,
+com $N = 640$.
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=\columnwidth]{exemplo_redimensionamento.png}}
+\caption{Exemplos de imagens do conjunto RecFac no tamanho original (acima)
+e redimensionadas para $30 \times 30$ pixels (abaixo).}
+\label{fig:redim}
+\end{figure}
+
+Os pixels foram normalizados para o intervalo $[-1, +1]$ pelo método
+min-max, indicado nas notas de aula para redes que usam a tangente
+hiperbólica~\cite{b1}:
+\begin{equation}
+x^* = 2 \cdot \frac{x - \min(\mathbf{X})}{\max(\mathbf{X}) - \min(\mathbf{X})} - 1.
+\label{eq:minmax}
+\end{equation}
+Como todos os pixels têm a mesma escala (0 a 255), foram usados o menor e o
+maior valor de toda a matriz. Em seguida, foi adicionada uma linha de
+valores $-1$ (o bias) no topo da matriz, resultando em
+$\mathbf{X} \in \mathbb{R}^{(p+1) \times N} = \mathbb{R}^{901 \times 640}$.
+
+Os rótulos foram codificados com \textit{one-hot encoding} bipolar: cada
+pessoa é representada por um vetor com $+1$ na posição da sua classe e $-1$
+nas demais. A matriz de rótulos é, então,
+$\mathbf{Y} \in \mathbb{R}^{C \times N} = \mathbb{R}^{20 \times 640}$, com as
+pessoas ordenadas pelo nome da pasta (an2i, at33, boland, bpm, ch4f, ...).
+
+\subsection{Modelos implementados}
+
+Os três modelos têm $m = C = 20$ neurônios na camada de saída, um para
+cada pessoa. Em todos, os pesos foram iniciados com valores aleatórios no
+intervalo $[-0{,}5;\ 0{,}5]$ e o treinamento foi feito amostra por amostra,
+com a ordem das amostras embaralhada a cada época. Como mais de um neurônio
+de saída (ou nenhum) pode indicar $+1$ ao mesmo tempo, a classe predita é a
+do neurônio de saída com o maior valor.
+
+\textbf{Perceptron Simples.} Para cada amostra $x(k)$, calcula-se o
+potencial de ativação $\mu(k) = \tilde{W}(k)\, x(k)$, em que $\tilde{W}$ é a
+matriz de pesos de ordem $m \times (p+1)$, e a saída $y(k) = g(\mu(k))$ pelo
+degrau bipolar, aplicado a cada neurônio. Os pesos são ajustados pela regra
+de aprendizagem do Perceptron~\cite{b2}:
+\begin{equation}
+\tilde{W}(k+1) = \tilde{W}(k) + \eta\, e(k)\, x^T(k), \quad
+e(k) = d(k) - y(k),
+\label{eq:regra}
+\end{equation}
+em que $\eta$ é a taxa de aprendizagem e $d(k)$ é a saída desejada. O
+Perceptron tradicional só para quando não há erros no conjunto de
+treinamento. Como pedido no enunciado, foi acrescentado um número máximo
+de épocas: o treinamento para quando uma época termina sem erros ou quando
+esse limite é atingido.
+
+\textbf{ADALINE.} Tem a mesma estrutura, mas o erro é calculado com o
+potencial de ativação, $e(k) = d(k) - \mu(k)$, e os pesos são ajustados pela
+regra Delta (LMS)~\cite{b3}, com a mesma forma de~\eqref{eq:regra}. O
+treinamento minimiza o erro quadrático médio (EQM), calculado a cada época
+sobre as $N$ amostras de treinamento (512) e as $m$ saídas:
+\begin{equation}
+EQM = \frac{1}{2Nm} \sum_{k=1}^{N} \sum_{l=1}^{m} \left[ d_l(k) - \mu_l(k) \right]^2.
+\label{eq:eqm}
+\end{equation}
+Essa é a expressão do EQM vista em aula para $m$ saídas, dividida também
+por $m$, como no código de referência da disciplina, que faz a média do
+erro quadrático sobre as amostras e as saídas~\cite{b1}. O treinamento para
+quando o EQM fica abaixo da precisão $pr$ ou quando o número máximo de
+épocas é atingido.
+
+\textbf{MLP.} Foi usada uma rede com uma camada oculta de $q$ neurônios e a
+camada de saída com $m$ neurônios. Todos os neurônios usam a tangente
+hiperbólica, na forma apresentada em aula~\cite{b1}:
+\begin{equation}
+y = g(\mu) = \frac{1 - e^{-\mu}}{1 + e^{-\mu}}, \qquad
+g'(\mu) = \frac{1}{2} \left( 1 - y^2 \right).
+\label{eq:ativacao}
+\end{equation}
+Diferente do ADALINE, o erro é calculado com a saída da rede,
+$e(k) = d(k) - y(k)$, e os pesos são ajustados pelo algoritmo de
+retropropagação do erro (\textit{backpropagation})~\cite{b4}, seguindo a
+implementação apresentada em aula~\cite{b1}. Os critérios de parada são os
+mesmos do ADALINE, com o EQM~\eqref{eq:eqm} calculado com $y_l(k)$ no lugar
+de $\mu_l(k)$.
+
+\subsection{Definição dos hiperparâmetros}
+
+Os hiperparâmetros foram escolhidos com testes preliminares: cada
+configuração foi treinada e testada em três partições 80/20 sorteadas, as
+mesmas para todas as configurações. A Tabela~\ref{tab:testes} resume esses
+testes e a Tabela~\ref{tab:hiper} mostra os valores escolhidos.
+
+\begin{table}[htbp]
+\caption{Testes preliminares dos hiperparâmetros (média de três partições)}
+\begin{center}
+\begin{tabular}{|l|l|c|c|}
+\hline
+\textbf{Modelo} & \textbf{Configuração} & \textbf{Acurácia} & \textbf{Épocas} \\
+\hline
+Perceptron & $\eta = 0{,}1$ & 0,9714 & 10 \\
+Simples & $\eta = 0{,}01$ & 0,9688 & 14 \\
+ & $\eta = 0{,}001$ & 0,9271 & 46 \\
+\hline
+ADALINE & $\eta = 0{,}01$ & divergiu & 3 \\
+ & $\eta = 0{,}001$ & 0,9349 & 100 \\
+ & $\eta = 0{,}0001$ & 0,6849 & 100 \\
+\hline
+MLP & $q = 20$, $\eta = 0{,}01$ & 0,9635 & 191 \\
+ & $q = 50$, $\eta = 0{,}01$ & 0,9792 & 99 \\
+ & $q = 134$, $\eta = 0{,}01$ & 0,9740 & 121 \\
+ & $q = 50$, $\eta = 0{,}1$ & 0,9688 & 53 \\
+ & $q = 50$, $\eta = 0{,}001$ & 0,9714 & 200 \\
+\hline
+\end{tabular}
+\label{tab:testes}
+\end{center}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Hiperparâmetros escolhidos}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Modelo} & \textbf{Topologia} & $\boldsymbol{\eta}$ & \textbf{Máx. épocas} & $\boldsymbol{pr}$ \\
+\hline
+Perceptron Simples & 900--20 & 0,01 & 100 & -- \\
+\hline
+ADALINE & 900--20 & 0,001 & 100 & $10^{-3}$ \\
+\hline
+MLP & 900--50--20 & 0,01 & 200 & $10^{-3}$ \\
+\hline
+\end{tabular}
+\label{tab:hiper}
+\end{center}
+\end{table}
+
+No Perceptron Simples, $\eta = 0{,}1$ e $\eta = 0{,}01$ tiveram praticamente
+o mesmo desempenho (diferença de uma imagem em 384), e $\eta = 0{,}001$ foi
+pior, provavelmente porque, com passos muito pequenos, os pesos finais
+ficam próximos dos pesos iniciais aleatórios. Foi mantido $\eta = 0{,}01$.
+Em todos os testes o Perceptron terminou o treinamento sem erros antes de
+50 épocas, então o limite de 100 épocas serve apenas como garantia de
+parada.
+
+O ADALINE foi o modelo mais sensível à taxa de aprendizagem. Como cada
+amostra tem 901 entradas, cada ajuste dos pesos é grande, e com
+$\eta = 0{,}01$ o EQM cresceu sem controle até o treinamento divergir. Com
+$\eta = 0{,}0001$ o aprendizado foi lento demais. Por isso foi escolhido
+$\eta = 0{,}001$. A precisão $pr = 10^{-3}$ é o valor sugerido nas
+notas de aula~\cite{b1}, e o limite de 100 épocas foi mantido porque a
+maior parte da redução do EQM acontece nas primeiras épocas.
+
+Para a MLP, as notas de aula apresentam regras que dão apenas um valor
+inicial para $q$~\cite{b1}: a regra do valor médio, $q = (p+m)/2 = 460$; a
+da raiz quadrada, $q = \sqrt{p \cdot m} \approx 134$; e a de Kolmogorov,
+$q = 2p + 1 = 1801$, em que $m = 20$ é o número de saídas. Foi testado o
+valor da raiz quadrada ($q = 134$) e valores menores, já que os demais
+deixariam o treinamento muito mais lento. Com $q = 20$ a rede precisou de
+quase todas as 200 épocas e teve a menor acurácia, possivelmente porque a
+camada oculta era pequena demais. Com $q = 134$ a acurácia foi parecida com
+a de $q = 50$, mas o treinamento foi mais lento. Por isso foi escolhido
+$q = 50$. Quanto à taxa de aprendizagem, $\eta = 0{,}1$ convergiu mais
+rápido (53 épocas), mas com acurácia menor, e $\eta = 0{,}001$ não atingiu a
+precisão em 200 épocas; assim, foi mantido $\eta = 0{,}01$.
+
+\subsection{Validação e métricas}
+
+Os modelos foram validados por simulações de Monte Carlo com $R = 10$
+rodadas, conforme o item 5 do enunciado. Em cada rodada, as 640 amostras
+foram embaralhadas e divididas em 80\% para treinamento (512 imagens) e
+20\% para teste (128 imagens). A mesma partição foi usada pelos três
+modelos em cada rodada, para que a comparação fosse justa, e a semente do
+gerador de números aleatórios foi fixada para que os resultados possam ser
+reproduzidos.
+
+A medida de desempenho foi a acurácia no conjunto de teste, calculada a
+partir da matriz de confusão implementada pela equipe: uma matriz
+$C \times C$ em que o elemento $(i, j)$ conta as imagens da pessoa $i$
+classificadas como pessoa $j$. A acurácia é a soma da diagonal dividida
+pela soma de todos os elementos. Ao final das rodadas foram calculados a
+média, o desvio-padrão, o maior e o menor valor da acurácia de cada modelo.
+Para as rodadas de maior e menor acurácia foram plotadas as matrizes de
+confusão (com a biblioteca Seaborn) e as curvas de aprendizado (EQM por
+época). No Perceptron Simples, o EQM das curvas foi calculado com as saídas
+do degrau bipolar.
+
+\section{Reconhecimento Facial: Resultados e Discussão}\label{sec:res2}
+
+\subsection{Desempenho geral}
+
+A Tabela~\ref{tab:acc2} e a Fig.~\ref{fig:boxplot} mostram a acurácia dos
+modelos nas 10 rodadas. A MLP obteve a maior média (97,42\%), seguida de
+perto pelo Perceptron Simples (96,80\%). A diferença entre os dois (0,62
+ponto percentual) é menor que o desvio-padrão de cada um (cerca de 1,1
+ponto), e o maior e o menor valor foram iguais para ambos (0,9922 e
+0,9531). Assim, nessas rodadas, os dois modelos tiveram desempenho muito
+parecido. O ADALINE teve a menor média (92,50\%) e a maior variação entre
+as rodadas, com acurácia entre 87,50\% e 96,09\%.
+
+\begin{table}[htbp]
+\caption{Estatísticas da acurácia ao longo das 10 rodadas}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Modelos} & \textbf{Média} & \textbf{Desvio-Padrão} & \textbf{Maior} & \textbf{Menor} \\
+\hline
+Perceptron Simples & 0,9680 & 0,0107 & 0,9922 & 0,9531 \\
+\hline
+ADALINE & 0,9250 & 0,0271 & 0,9609 & 0,8750 \\
+\hline
+MLP & 0,9742 & 0,0116 & 0,9922 & 0,9531 \\
+\hline
+\end{tabular}
+\label{tab:acc2}
+\end{center}
+\end{table}
+
+\begin{figure*}[htbp]
+\centerline{\includegraphics[width=0.85\textwidth]{acuracia_boxplot.png}}
+\caption{Boxplot (esquerda) e violin plot (direita) da acurácia de teste
+nas 10 rodadas.}
+\label{fig:boxplot}
+\end{figure*}
+
+O bom resultado de um modelo linear como o Perceptron Simples se explica
+pela alta dimensão dos dados: há 900 atributos para apenas 512 imagens de
+treinamento, e o Perceptron chegou a zero erros de treinamento em todas as
+rodadas, ou seja, as 20 classes foram linearmente separáveis no conjunto de
+treinamento. O ADALINE usa a mesma estrutura, mas minimiza o erro
+quadrático da saída linear em vez de corrigir apenas as classificações
+erradas, e não atingiu a precisão definida dentro do limite de épocas, o
+que ajuda a explicar a sua menor acurácia. A MLP tem
+$z = q(p+1) + m(q+1) = 50 \cdot 901 + 20 \cdot 51 = 46.070$ parâmetros, muito
+mais que as 512 amostras de treinamento, o que vai contra a regra $N \gg z$
+das notas de aula~\cite{b1} e indicaria risco de \textit{overfitting}. Mesmo assim, ela
+teve a maior acurácia de teste, ou seja, generalizou bem.
+
+\subsection{Matrizes de confusão}
+
+As Figs.~\ref{fig:mc_ps}, \ref{fig:mc_adaline} e~\ref{fig:mc_mlp} mostram
+as matrizes de confusão das rodadas de maior e menor acurácia. Como cada
+pessoa tem cerca de seis imagens no conjunto de teste, os erros aparecem
+como valores isolados fora da diagonal. Nas rodadas de maior acurácia, o
+Perceptron Simples e a MLP erraram apenas uma imagem cada (phoebe
+classificada como boland e mitchell classificada como danieln,
+respectivamente), e o ADALINE errou cinco. Na rodada 7, a de menor acurácia
+do Perceptron e da MLP, os dois modelos erraram seis imagens; cinco delas
+eram das mesmas pessoas (an2i, glickman, karyadi, mitchell e saavik), e em
+dois casos o erro foi idêntico (an2i classificada como sz24 e karyadi como
+kawamura). Na rodada 8, a pior do ADALINE, os 16 erros ficaram espalhados
+por 10 pessoas.
+
+Somando as 10 rodadas, os erros se concentraram em poucas pessoas. A
+pessoa mitchell foi a mais errada pela MLP (8 de 63 imagens de teste) e
+pelo Perceptron (5 de 63), e glickman foi a classe mais escolhida por
+engano por esses dois modelos. Por outro lado, ch4f nunca foi errada por
+nenhum modelo, e a MLP acertou todas as imagens de 9 das 20 pessoas. O
+ADALINE espalhou mais os erros: 18 das 20 pessoas tiveram ao menos uma
+imagem errada.
+
+Também houve um padrão nas imagens. Algumas foram erradas repetidamente
+pelos três modelos, como a de kawamura olhando para cima e sorrindo (errada
+quatro vezes por cada modelo) e a de choon virada para a esquerda, com
+raiva e de óculos escuros (três vezes por cada modelo). Metade das imagens
+do conjunto tem óculos escuros, mas eles aparecem em 64\% dos erros da MLP e
+em 56\% dos erros do Perceptron. Na MLP, apenas 4 dos 33 erros foram em
+rostos de frente. Ou seja, os erros desses dois modelos ocorrem mais quando
+parte do rosto está coberta ou virada. No ADALINE isso não aconteceu com os
+óculos (46\% dos erros), e os erros foram mais comuns nos rostos virados
+para os lados (58 de 96).
+
+\begin{figure*}[htbp]
+\centerline{\includegraphics[width=0.9\textwidth]{confusao_perceptron.png}}
+\caption{Matrizes de confusão do Perceptron Simples nas rodadas de maior
+(esquerda) e menor (direita) acurácia. Linhas: classe real; colunas: classe
+predita.}
+\label{fig:mc_ps}
+\end{figure*}
+
+\begin{figure*}[htbp]
+\centerline{\includegraphics[width=0.9\textwidth]{confusao_adaline.png}}
+\caption{Matrizes de confusão do ADALINE nas rodadas de maior (esquerda) e
+menor (direita) acurácia. Linhas: classe real; colunas: classe predita.}
+\label{fig:mc_adaline}
+\end{figure*}
+
+\begin{figure*}[htbp]
+\centerline{\includegraphics[width=0.9\textwidth]{confusao_mlp.png}}
+\caption{Matrizes de confusão da MLP nas rodadas de maior (esquerda) e
+menor (direita) acurácia. Linhas: classe real; colunas: classe predita.}
+\label{fig:mc_mlp}
+\end{figure*}
+
+\subsection{Curvas de aprendizado}
+
+A Fig.~\ref{fig:curvas} mostra as curvas de aprendizado das rodadas de
+maior e menor acurácia. Nos três modelos, o EQM cai rapidamente nas
+primeiras épocas e depois se estabiliza. O Perceptron Simples terminou o
+treinamento sem erros entre 11 e 16 épocas em todas as rodadas. O ADALINE
+sempre parou no limite de 100 épocas, com o EQM ainda acima de $10^{-3}$,
+mas quase sem variação depois das primeiras dezenas de épocas. A MLP
+atingiu a precisão entre 70 e 190 épocas, antes do limite de 200.
+
+As curvas das rodadas de maior e menor acurácia são muito parecidas nos
+três modelos. Logo, a diferença de acurácia entre as rodadas vem
+principalmente de quais imagens caíram no conjunto de teste, e não de um
+treinamento pior. Isso também aparece no fato de as rodadas de maior e
+menor acurácia (6 e 7) serem as mesmas para o Perceptron Simples e para a
+MLP.
+
+\begin{figure*}[htbp]
+\centerline{\includegraphics[width=\textwidth]{curvas_aprendizado.png}}
+\caption{Curvas de aprendizado (EQM por época) nas rodadas de maior e menor
+acurácia de cada modelo.}
+\label{fig:curvas}
+\end{figure*}
+
+\section{Conclusão}\label{sec:conclusao}
+
+\pendente{Conclusões da primeira etapa.}
+
+Na segunda etapa, os três modelos reconheceram as 20 pessoas com acurácia
+média acima de 92\%, mesmo com as imagens reduzidas para $30 \times 30$
+pixels. A MLP teve a maior acurácia média (97,42\%), mas o Perceptron
+Simples ficou muito próximo (96,80\%) e precisou de bem menos épocas, o que
+mostra que, nesse problema de alta dimensão, um modelo linear já separa bem
+as classes. O ADALINE teve o pior desempenho e a maior variação entre as
+rodadas, além de não atingir a precisão definida dentro do limite de
+épocas. As matrizes de confusão mostraram que os modelos tendem a errar as
+mesmas pessoas e imagens, principalmente rostos com óculos escuros ou
+virados, o que indica que essas imagens são mais difíceis de reconhecer
+nessa resolução. Como trabalhos futuros, podem ser testadas as
+outras dimensões de imagem, mais épocas para o ADALINE e um número maior de
+rodadas de Monte Carlo.
+
+\begin{thebibliography}{00}
+\bibitem{b1} P. C. S. Barbosa, ``Notas de aula: Inteligência Artificial Computacional (T296),'' Universidade de Fortaleza, 2026, não publicado.
+\bibitem{b2} F. Rosenblatt, ``The perceptron: a probabilistic model for information storage and organization in the brain,'' \textit{Psychological Review}, vol. 65, no. 6, pp. 386--408, 1958.
+\bibitem{b3} B. Widrow and M. E. Hoff, ``Adaptive switching circuits,'' in \textit{IRE WESCON Convention Record}, part 4, pp. 96--104, 1960.
+\bibitem{b4} D. E. Rumelhart, G. E. Hinton, and R. J. Williams, ``Learning representations by back-propagating errors,'' \textit{Nature}, vol. 323, no. 6088, pp. 533--536, 1986.
+\bibitem{b5} T. M. Mitchell, \textit{Machine Learning}. New York: McGraw-Hill, 1997.
+\end{thebibliography}
+
+\end{document}
